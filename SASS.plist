@@ -370,13 +370,10 @@
 			<string>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz^-_%.+=$@#-</string>
         <key>String Pattern</key>
         <string><![CDATA[(?x:
-				(?P<string_double>".+?") | (?P<string_single>'.+?')
-			)]]></string>
-			<key>Skip Pattern</key>
-			<string><![CDATA[(?x:
-				(?>
-					(?P>comment) | (?P>string)
-				)
+            (".+?")    |
+            ('.+?')    |
+            (\.[\w-]+) |
+            (\#[\w-]+)
         )]]></string>
     </dict>
 </dict>
